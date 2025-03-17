@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 
-const InputBox = () => {
+const Form = () => {
   const [email, setEmail] = useState({
     Email: "",
   });
@@ -58,4 +58,4 @@ const InputBox = () => {
   );
 };
 
-export default InputBox;
+export default Form;

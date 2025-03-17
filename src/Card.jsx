@@ -1,13 +1,5 @@
 import React from "react";
 
-const CardData = [
-  {
-    id: 6,
-    imgSrc: "./data.png",
-    title: "Data Processing",
-  },
-];
-
 function Card({ elem }) {
 
   const {imgSrc , title } = elem

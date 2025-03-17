@@ -1,9 +1,42 @@
 import React from "react";
 import Card from "./Card";
-import InputBox from "./InputBox";
 import { useState, useEffect } from "react";
+import Form from "./Form";
 
 const App = () => {
+
+  const CardData = [
+    {
+      id: 1,
+      imgSrc: "./pres.png",
+      title: "Presentation Design",
+    },
+    {
+      id: 2,
+      imgSrc: "./videos.png",
+      title: "Audio - Visual Production",
+    },
+    {
+      id: 3,
+      imgSrc: "./translation.png",
+      title: "Translation Services",
+    },
+    {
+      id: 4,
+      imgSrc: "./graphic.png",
+      title: "Graphic Design",
+    },
+    {
+      id: 5,
+      imgSrc: "./research.png",
+      title: "Research & Analysis",
+    },
+    {
+      id: 6,
+      imgSrc: "./data.png",
+      title: "Data Processing",
+    },
+  ];
   const [width, setWidth] = useState(window.innerWidth);
 
   useEffect(() => {
@@ -23,9 +56,9 @@ const App = () => {
         className="flex flex-col items-center lg:items-start text-center lg:text-start p-4 space-y-2 sm:space-y-4 lg:space-y-10"
       >
         <img
-          className="w-40 sm:w-56 lg:w-[20rem] xl:w-[30rem]"
+          className="w-40 sm:w-56 lg:w-[20rem] xl:w-[30rem] object-cover object-center"
           src="./logo.png"
-          alt="EZ works logo"
+          alt="EZ logo"
         />
         <h1 className="text-3xl sm:text-[2rem] xl:text-[3rem] text-primary sm:text-nowrap">
           {width < 1024 ? (
@@ -42,7 +75,7 @@ const App = () => {
         </p>
         {width >= 650 && (
           <div className="max-w-screen-md">
-            <InputBox />
+            <Form />
           </div>
         )}
       </div>
@@ -57,42 +90,11 @@ const App = () => {
 
 
       </div>
-      {width < 650 && <InputBox />}
+      {width < 650 && <Form />}
     </div>
   );
 };
 
 export default App;
 
-const CardData = [
-  {
-    id: 1,
-    imgSrc: "./pres.png",
-    title: "Presentation Design",
-  },
-  {
-    id: 2,
-    imgSrc: "./videos.png",
-    title: "Audio - Visual Production",
-  },
-  {
-    id: 3,
-    imgSrc: "./translation.png",
-    title: "Translation Services",
-  },
-  {
-    id: 4,
-    imgSrc: "./graphic.png",
-    title: "Graphic Design",
-  },
-  {
-    id: 5,
-    imgSrc: "./research.png",
-    title: "Research & Analysis",
-  },
-  {
-    id: 6,
-    imgSrc: "./data.png",
-    title: "Data Processing",
-  },
-];
+
