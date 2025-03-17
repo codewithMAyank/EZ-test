@@ -1,7 +1,7 @@
 import React from "react";
-import Card from "./Card";
+import Card from "./Components/Card";
 import { useState, useEffect } from "react";
-import Form from "./Form";
+import Form from "./Components/Form";
 
 const App = () => {
 
